@@ -15,20 +15,20 @@
       <h1 id="title">International Violin Competition</h1>
       <!-- <img src="violin-icon-8.jpg" class="icon" /> -->
     </div>
-    <h2 class="info">Registration form</h2>
-    <form id="survay-form">
+    <p class="info" id="description">Registration form</p>
+    <form id="survey-form">
       <p class="per-data">Personal data:</p>
 
       <div class="input-group">
         <label for="name" id="name-label">Name</label>
-        <input id="name" type="text" placeholder="name" />
+        <input id="name" type="text" placeholder="name" required />
       </div>
       <div class="input-group">
         <label for="email" id="email-label">Email</label>
-        <input id="email" type="email" placeholder="email@" />
+        <input id="email" type="email" placeholder="email@" required />
       </div>
       <div class="input-group">
-        <label for="number" id="age-label">Age</label>
+        <label for="number" id="number-label">Age</label>
         <input id="number" type="number" min="16" max="32" placeholder="age" />
       </div>
       <p id="instrument" class="per-data">The instrument you play</p>
@@ -37,25 +37,53 @@
         <option value="modern European violin">Modern European violin</option>
         <option value="other">Other</option>
       </select>
-      <p class="per-data">Which concert will you play?</p>
-      <input
-        type="radio"
-        id="wieniawski"
-        name="which-concert"
-        value="wieniawski violin concerto"
-      />
-      <label for="wieniawski">Wieniawski violin concerto</label>
-      <br />
-      <input
-        type="radio"
-        id="szymanowski"
-        name="which-concert"
-        value="szymanowski"
-      />
-      <label for="szymanowski">Szymanowski violin concerto</label>
-      <br />
-      <input type="radio" id="sibelius" name="which-concert" value="sibelius" />
-      <label for="sibelius">Sibelius violin concerto</label>
+      <div>
+        <p class="per-data">Which concert will you play?</p>
+        <input
+          type="radio"
+          id="wieniawski"
+          name="which-concert"
+          value="wieniawski violin concerto"
+        />
+        <label for="wieniawski">Wieniawski violin concerto</label>
+        <br />
+        <input
+          type="radio"
+          id="szymanowski"
+          name="which-concert"
+          value="szymanowski"
+        />
+        <label for="szymanowski">Szymanowski violin concerto</label>
+        <br />
+        <input
+          type="radio"
+          id="sibelius"
+          name="which-concert"
+          value="sibelius"
+        />
+        <label for="sibelius">Sibelius violin concerto</label>
+      </div>
+      <div>
+        <p class="per-data">Which secondary concert will you play?</p>
+        <input
+          type="radio"
+          id="Mozart"
+          name="which-concert"
+          value="mozart violin concerto"
+        />
+        <label for="wieniawski">Mozart violin concerto</label>
+        <br />
+        <input type="radio" id="bach" name="which-concert" value="bach" />
+        <label for="szymanowski">Bach violin concerto</label>
+        <br />
+        <input
+          type="radio"
+          id="beethoven"
+          name="which-concert"
+          value="beethoven"
+        />
+        <label for="sibelius">Beethoven violin concerto</label>
+      </div>
       <p class="per-data">What you need during the competition</p>
       <input
         type="checkbox"
@@ -92,7 +120,7 @@
         cols="40"
         placeholder="I'm asking for..."
       ></textarea>
-      <input type="submit" value="submit" class="submit" />
+      <input id="submit" type="submit" value="submit" class="submit" />
     </form>
   </body>
 </html>
